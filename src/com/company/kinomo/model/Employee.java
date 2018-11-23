@@ -6,6 +6,7 @@ public class Employee {
     private int id;
     private int salary;
     private String jobPosition;
+    private String skill;
 
     public Employee(String ivan) {
 
@@ -15,12 +16,13 @@ public class Employee {
         this.id = id;
     }
 
-    public Employee(String firstName, String lastName, int id, int salary, String jobPosition) {
+    public Employee(String firstName, String lastName, int id, int salary, String jobPosition, String skill) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
         this.salary = salary;
         this.jobPosition = jobPosition;
+        this.skill = skill;
     }
 
     public int getSalary() {
