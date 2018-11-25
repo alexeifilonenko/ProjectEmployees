@@ -12,8 +12,13 @@ public class Main {
         Employee theFifth = new Employee("Jonh", "Fox", 005, 1300, "manager", "senior");
         Employee theSixth = new Employee("Georg", "Wash", 006, 600, "junior", "tester");
 
-        theFirst.toTellAboutYourself();
-        theSecond.toTellAboutYourself();
+        System.out.println(theFirst.getFirstName());
+        System.out.println(theFifth.getFirstName());
+
+        System.out.println(theThird.getSalary());
+
+        //theFirst.toTellAboutYourself();
+        //theSecond.toTellAboutYourself();
 
     }
 }
