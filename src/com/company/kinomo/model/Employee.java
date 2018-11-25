@@ -9,7 +9,7 @@ public class Employee {
     private String skill;
 
     public void toTellAboutYourself() {
-        System.out.println("My name is " + firstName + ". " + "I'm a " + skill + " " + jobPosition);
+        System.out.println("My name is " + firstName + ". " + "I'm a " + skill + " " + jobPosition);    // метод раюотника - представиться
     }
 
     public Employee(String ivan) {          // конструктор 1
@@ -36,5 +36,10 @@ public class Employee {
     public int setSalary(int salary) {
         this.salary = salary;
         return salary;
+    }
+
+    public void setNewSkillsAndMewSalary(String newSkills, int newSalary) {
+        skill = newSkills;
+        salary = newSalary;
     }
 }
