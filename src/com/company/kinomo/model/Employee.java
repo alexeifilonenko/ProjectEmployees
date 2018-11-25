@@ -3,23 +3,27 @@ package com.company.kinomo.model;
 public class Employee {
     private String firstName;
     private String lastName;
-    private int id;
+    private int id;                         // класс "работник"
     private int salary;
     private String jobPosition;
     private String skill;
 
-    public Employee(String ivan) {
+    public void toTellAboutYourself() {
+        System.out.println("My name is " + firstName + ". " + "I'm a " + skill + " " + jobPosition);
+    }
+
+    public Employee(String ivan) {          // конструктор 1
 
     }
 
     public Employee(int id) {
         this.id = id;
-    }
+    }   // контструктор 2
 
     public Employee(String firstName, String lastName, int id, int salary, String jobPosition, String skill) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.id = id;
+        this.id = id;                           // контсруктор 3
         this.salary = salary;
         this.jobPosition = jobPosition;
         this.skill = skill;
@@ -29,7 +33,8 @@ public class Employee {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public int setSalary(int salary) {
         this.salary = salary;
+        return salary;
     }
 }
