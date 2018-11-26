@@ -11,7 +11,7 @@ public class Manager {
         this.lastName = lastName;
     }
 
-    public Employee promote(Employee employee) {
+    public Employee toPromote(Employee employee) {
         String skill =  employee.getSkill();
         if(skill.equals("junior")) {
             employee.setSkill("middle");
@@ -19,6 +19,20 @@ public class Manager {
             employee.setSkill("senior");
         }else if(skill.equals("senior")) {
             employee.setSkill("lead");
+        }else if (skill.equals("lead")) {
+            employee.setSkill("manager");
+        }
+        return employee;
+    }
+
+    public Employee toUpSalary(Employee employee) {
+        int salary = employee.getSalary();
+        if(salary < 800) {
+            employee.setSalary(employee.getSalary() + 200);
+        }else if(salary < 1400) {
+            employee.setSalary(employee.getSalary() +300);
+        }else if(salary < 2100) {
+            employee.setSalary(employee.getSalary() + 250);
         }
         return employee;
     }

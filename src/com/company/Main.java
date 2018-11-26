@@ -15,14 +15,22 @@ public class Main {
 
 
         Manager manager = new Manager("Bill", "Gates");
-        manager.promote(theFifth);
+        manager.toPromote(theFifth);
         System.out.println(theFifth.getSkill());
+        manager.toPromote(theFouth);
+        System.out.println(theFouth.getSkill());
+        manager.toUpSalary(theSecond);
+        System.out.println(theSecond.getSalary());
+        manager.toUpSalary(theFifth);
+        manager.toUpSalary(theFirst);
+        System.out.println(theFirst.getSalary());
+        System.out.println(theFirst.getSalary());
 
 
 
 
 
-        System.out.println(theFirst.getFirstName());
+        //System.out.println(theFirst.getFirstName());
        // System.out.println(theFifth.getFirstName());
 
        // System.out.println(theThird.getSalary());
