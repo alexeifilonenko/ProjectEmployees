@@ -1,7 +1,7 @@
 package com.company;
 
 import com.company.kinomo.management.Manager;
-import com.company.kinomo.model.Employee;
+import com.company.kinomo.staff.Employee;
 
 public class Main {
 
@@ -13,9 +13,10 @@ public class Main {
         Employee theFifth = new Employee("Jonh", "Fox", 005, 1300, "manager", "senior");
         Employee theSixth = new Employee("Georg", "Wash", 006, 600, "tester", "junior");
 
-        Manager theFirstManager = new Manager(theFirst);
 
-
+        Manager manager = new Manager("Bill", "Gates");
+        manager.promote(theFifth);
+        System.out.println(theFifth.getSkill());
 
 
 

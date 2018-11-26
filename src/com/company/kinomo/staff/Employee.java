@@ -1,4 +1,4 @@
-package com.company.kinomo.model;
+package com.company.kinomo.staff;
 
 public class Employee {
     private String firstName;
@@ -77,6 +77,10 @@ public class Employee {
 
     public void toTellAboutYourself() {
         System.out.println("My name is " + firstName + ". " + "I'm a " + skill + " " + jobPosition);    // метод работника - представиться
+    }
+
+    public void printName() {
+        System.out.println(firstName);
     }
 
 
