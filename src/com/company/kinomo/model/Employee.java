@@ -7,58 +7,7 @@ public class Employee {
     private int salary;
     private String jobPosition;
     private String skill;
-
-    public void setFirstName(String userFirstName) {
-        firstName = userFirstName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setLastName(String userLastName) {
-        lastName = userLastName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setId(int userId) {
-        id = userId;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setSalary(int userSalary) {
-        salary = userSalary;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setJobPosition(String userJobPosition) {
-        jobPosition = userJobPosition;
-    }
-
-    public String getJobPosition() {
-        return jobPosition;
-    }
-
-    public void setSkill(String userSkills) {
-        skill = userSkills;
-    }
-
-    public String getSkill() {
-        return skill;
-    }
-
-    public void toTellAboutYourself() {
-        System.out.println("My name is " + firstName + ". " + "I'm a " + skill + " " + jobPosition);    // метод работника - представиться
-    }
+    private static int countEmployee;
 
     public Employee(String ivan) {          // конструктор 1
 
@@ -75,11 +24,68 @@ public class Employee {
         this.salary = salary;
         this.jobPosition = jobPosition;
         this.skill = skill;
+        countEmployee++;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setJobPosition(String jobPosition) {
+        this.jobPosition = jobPosition;
+    }
+
+    public String getJobPosition() {
+        return jobPosition;
+    }
+
+    public void setSkill(String skill) {
+        this.skill = skill;
+    }
+
+    public String getSkill() {
+        return skill;
+    }
+
+    public void toTellAboutYourself() {
+        System.out.println("My name is " + firstName + ". " + "I'm a " + skill + " " + jobPosition);    // метод работника - представиться
     }
 
 
+    public void numberOfEmployee() {
+        System.out.println("Number of employees in company " + countEmployee);
+    }
 
-    public void setNewSkillsAndMewSalary(String newSkills, int newSalary) {
+
+    public void setNewSkillsAndNewSalary(String newSkills, int newSalary) {
         skill = newSkills;
         salary = newSalary;
     }

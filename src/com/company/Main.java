@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.kinomo.management.Manager;
 import com.company.kinomo.model.Employee;
 
 public class Main {
@@ -10,12 +11,23 @@ public class Main {
         Employee theThird = new Employee("Alex", "Sidorov", 003, 2200, "tester", "senior");
         Employee theFouth = new Employee("Bob", "Brown", 004, 3000, "developer", "lead");
         Employee theFifth = new Employee("Jonh", "Fox", 005, 1300, "manager", "senior");
-        Employee theSixth = new Employee("Georg", "Wash", 006, 600, "junior", "tester");
+        Employee theSixth = new Employee("Georg", "Wash", 006, 600, "tester", "junior");
+
+        Manager theFirstManager = new Manager(theFirst);
+
+
+
+
+
+
 
         System.out.println(theFirst.getFirstName());
-        System.out.println(theFifth.getFirstName());
+       // System.out.println(theFifth.getFirstName());
 
-        System.out.println(theThird.getSalary());
+       // System.out.println(theThird.getSalary());
+
+       // theFirst.numberOfEmployee();
+       // theSecond.numberOfEmployee();
 
         //theFirst.toTellAboutYourself();
         //theSecond.toTellAboutYourself();
