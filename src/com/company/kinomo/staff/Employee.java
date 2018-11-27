@@ -9,7 +9,7 @@ public class Employee {
     private String skill;
     private static int countEmployee;
 
-    public Employee(String ivan) {          // конструктор 1
+    public Employee() {          // конструктор 1
 
     }
 

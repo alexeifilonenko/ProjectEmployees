@@ -3,18 +3,26 @@ package com.company.kinomo.management;
 import com.company.kinomo.staff.Employee;
 
 public class Manager {
-    private String firstName;
+    private String firstName;                           //класс Manager
     private String lastName;
+    private Employee employee;
 
     public Manager(String firstName, String lastName) {
-        this.firstName = firstName;
+        this.firstName = firstName;                     //конструктор Manager
         this.lastName = lastName;
     }
 
-    public Employee toPromote(Employee employee) {
+    public Manager(Employee employee) {
+        this.employee = employee;
+    }
+    public void printEmployee() {
+        System.out.println(employee.getFirstName() + employee.getLastName());
+    }
+
+    public Employee toPromote() {
         String skill =  employee.getSkill();
         if(skill.equals("junior")) {
-            employee.setSkill("middle");
+            employee.setSkill("middle");            //метод "Повышение"
         }else if(skill.equals("middle")) {
             employee.setSkill("senior");
         }else if(skill.equals("senior")) {
@@ -22,16 +30,18 @@ public class Manager {
         }else if (skill.equals("lead")) {
             employee.setSkill("manager");
         }
+
+        //if ("juhdgfh".equals(skill) )
         return employee;
     }
 
     public Employee toUpSalary(Employee employee) {
         int salary = employee.getSalary();
-        if(salary < 800) {
+        if(salary < 800) {                                      //метод "Поднять з/п"
             employee.setSalary(employee.getSalary() + 200);
-        }else if(salary < 1400) {
+        }else if(salary < 1400 && salary > 801) {
             employee.setSalary(employee.getSalary() +300);
-        }else if(salary < 2100) {
+        }else if(salary < 2100 && salary > 1401) {
             employee.setSalary(employee.getSalary() + 250);
         }
         return employee;

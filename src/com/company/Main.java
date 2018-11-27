@@ -14,17 +14,24 @@ public class Main {
         Employee theSixth = new Employee("Georg", "Wash", 006, 600, "tester", "junior");
 
 
+        theFirst.toTellAboutYourself();
+
+        Manager manager2 = new Manager(theFirst);
+        manager2.printEmployee();
+
+
+
         Manager manager = new Manager("Bill", "Gates");
-        manager.toPromote(theFifth);
+        //manager.toPromote(theFifth);
         System.out.println(theFifth.getSkill());
-        manager.toPromote(theFouth);
+       // manager.toPromote(theFouth);
         System.out.println(theFouth.getSkill());
         manager.toUpSalary(theSecond);
         System.out.println(theSecond.getSalary());
         manager.toUpSalary(theFifth);
         manager.toUpSalary(theFirst);
         System.out.println(theFirst.getSalary());
-        System.out.println(theFirst.getSalary());
+        System.out.println(theFifth.getSalary());
 
 
 
