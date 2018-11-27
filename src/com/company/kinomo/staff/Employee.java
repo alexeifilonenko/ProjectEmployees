@@ -26,7 +26,7 @@ public class Employee {
         this.skill = skill;
         countEmployee++;
     }
-
+            // сеттеры и геттеры переменных
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -89,8 +89,5 @@ public class Employee {
     }
 
 
-    public void setNewSkillsAndNewSalary(String newSkills, int newSalary) {
-        skill = newSkills;
-        salary = newSalary;
-    }
+
 }
