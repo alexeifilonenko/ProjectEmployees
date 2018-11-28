@@ -38,7 +38,7 @@ public class Manager {          // создаем класс Manager
        } return employeeArr;
    }
 
-   //метод, в который передается jobPosition сотрудника и выводятся все сотрудники, которые соответствуют данной позиции
+   //метод, в который передается jobPosition сотрудника и выводятся всех сотрудников, которые соответствуют данной позиции
 
    public void toShowEmployee(String jobPosition) {
        for (int i = 0; i < employeeArr.length; i++) {
@@ -50,6 +50,21 @@ public class Manager {          // создаем класс Manager
            }
        }
    }
+
+   //метод, в который передается min и max зарплата работника и метод возвразает список подходящих сотрудников
+
+    public void showMinMaxSalary(int minSalary, int maxSalary) {
+        for (int i = 0; i < employeeArr.length; i++) {
+            Employee currentEmployee = employeeArr[i];
+            int currentSalary = currentEmployee.getSalary();  //говорим, что зп выбранного работника является минимальной
+            if (minSalary < currentSalary && currentSalary < maxSalary) {
+                System.out.println(currentEmployee.getFirstName() + " " + currentEmployee.getLastName() + " " +currentEmployee.getSalary());
+            }
+
+            }
+
+
+    }
 
     public Manager(Employee employee) { // создаем конструктор Manager
         this.employee = employee;
