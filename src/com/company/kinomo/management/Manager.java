@@ -7,7 +7,49 @@ public class Manager {          // создаем класс Manager
 
     private Employee employee;  // к классе Manager создаем приватную переменную типа Employee (она будет ссылаться на объект)
 
+    private Employee[] employeeArr = new Employee[6];    //создали массив employeeArr
 
+    public void addEmployee(Employee employee, int index) { //создали метод, который добавляет employee в массив
+        this.employeeArr[index] = employee;
+    }
+
+    public Employee getEmployee(int index) {            // создали метод, который получает сотрудника из массива по идексу
+        return employeeArr[index];
+    }
+
+    //метод, который в зависимости от значения поля jobPosition установит все сотрудникам новое значение з/п
+
+   public Employee[] upSalary() {
+
+       for (int i = 0; i < employeeArr.length; i++) {
+
+           Employee currentEmployee = employeeArr[i]; // getEmployee(i);
+
+           String jobPosition = currentEmployee.getJobPosition();           //взяли значение поля jobPosition
+
+           if ("developer".equals(jobPosition)) {
+               currentEmployee.setSalary(777);
+           } else if ("tester".equals(jobPosition)) {
+               currentEmployee.setSalary(888);
+           } else if ("manager".equals(jobPosition)) {
+               currentEmployee.setSalary(999);
+           }
+
+       } return employeeArr;
+   }
+
+   //метод, в который передается jobPosition сотрудника и выводятся все сотрудники, которые соответствуют данной позиции
+
+   public void toShowEmployee(String jobPosition) {
+       for (int i = 0; i < employeeArr.length; i++) {
+           Employee currentEmployee = employeeArr[i];
+           String jobPosition1 = currentEmployee.getJobPosition();
+
+           if (jobPosition.equals(jobPosition1)) {
+               System.out.println(currentEmployee.getFirstName() + " " + currentEmployee.getLastName());
+           }
+       }
+   }
 
     public Manager(Employee employee) { // создаем конструктор Manager
         this.employee = employee;
